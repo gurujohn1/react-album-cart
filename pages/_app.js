@@ -1,5 +1,15 @@
-import "@/styles/globals.css";
+import "./globals.scss";
+//import Layout from "../components/layout";
+import Header from "../components/header";
 
-export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />;
+function MyApp({ Component, pageProps }) {
+  //const getLayout = Component.getLayout || ((page) => page);
+  return (
+    <>
+      <Header />
+      <Component {...pageProps} />
+    </>
+  );
 }
+
+export default MyApp;
