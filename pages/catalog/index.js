@@ -71,7 +71,11 @@ function Catalog({ products }) {
     newCart.products = cart.products.filter((item) => item !== product);
     setCart(newCart);
   }
-
+  {
+    process.env.NEXT_PUBLIC_FEATURE1_ENABLED.toUpperCase() === "TRUE"
+      ? console.log("ENABLED")
+      : console.log("DISABLED");
+  }
   return (
     <>
       <div className={styles.container}>

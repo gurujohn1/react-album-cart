@@ -10,7 +10,7 @@ function Product() {
   const { productId } = router.query;
 
   //const productId = "0432989d-7658-4f9d-bcd9-d9938400a732";
-  const product = products.find((p) => p._id === productId);
+  const product = products.find((p) => p._id === productId?.toLowerCase());
 
   if (!productId) {
     return null;
@@ -26,7 +26,7 @@ function Product() {
           src={`/images/albums/${product.imageName}`}
           width={750}
           height={750}
-          alt={product.name}
+          alt={product.title}
         />
       </div>
     </div>
